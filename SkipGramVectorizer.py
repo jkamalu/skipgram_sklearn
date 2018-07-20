@@ -13,7 +13,7 @@ class SkipGramVectorizer(CountVectorizer):
 		self.window_size = kwargs.pop("window_size", 1)
 		self.skip_range = kwargs.pop("skip_range", (0,0))
 
-		super(SkipGramVectorizer, self).__init__(kwargs)
+		super(SkipGramVectorizer, self).__init__(**kwargs)
 		
 		# window_size assertions
 		assert type(self.window_size) == type(int())
